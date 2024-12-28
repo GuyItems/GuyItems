@@ -1,10 +1,6 @@
 local request = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request)
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer  -- ใช้ LocalPlayer
-local webhookUrlNormal = "https://ptb.discord.com/api/webhooks/1322490909455290439/IPJf3j5eTuUt7LWJBRqqG_zni0gABXDUiSkj9emoEsGrchZy8XRbwovkhtfIfX1dSr6s"
-local webhookUrlFinish = "https://ptb.discord.com/api/webhooks/1322490953277243404/WoFh8vsoK7rULBIz2Sde6K3WK4zJnhViAh7gTj-pCP8hSdGhNyvmjdkyhilYdd0IYbkF"
-local targetgems = 1655
-local discordId = "387914271943557130"
 
 -- ดึงค่าจาก path ที่ระบุสำหรับ LocalPlayer
 local playerStats = LocalPlayer:WaitForChild("_stats")
