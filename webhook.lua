@@ -94,15 +94,20 @@ end
 
 -- ส่งข้อมูล Webhook
     -- ส่ง Webhook ปกติ (normal) ทันที
+    while true do
     local GameFinished = game:GetService("Workspace")["_DATA"].GameFinished.Value
     if GameFinished == true then
     local normalData = CreateNormalWebhookData()
     SendWebhook(_G.webhookUrlNormal, normalData)
-
+    wait(10)
+    end
     -- ตรวจสอบว่า gemamount >= targetgems หรือไม่ ก่อนส่ง Webhook แบบ Finish
+    while true do
     if gemamount >= _G.targetgems then
         local finishData = CreateFinishWebhookData()
         SendWebhook(_G.webhookUrlFinish, finishData)
+        wait(10)
+        end
     end
 end
 
