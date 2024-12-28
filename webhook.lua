@@ -100,7 +100,7 @@ end
     SendWebhook(_G.webhookUrlNormal, normalData)
 
     -- ตรวจสอบว่า gemamount >= targetgems หรือไม่ ก่อนส่ง Webhook แบบ Finish
-    if gemamount >= targetgems then
+    if gemamount >= _G.targetgems then
         local finishData = CreateFinishWebhookData()
         SendWebhook(_G.webhookUrlFinish, finishData)
     end
